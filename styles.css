@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Josefin Sans", Tahoma, Verdana, sans-serif;
+    background: linear-gradient(180deg,rgba(255, 230, 232, 1) 21%, rgba(231, 143, 142, 1) 100%);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.top-bar {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.top-bar h1 {
+    color: black;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+#new-grid-btn {
+    background: linear-gradient(45deg, #F48498, #E78F8E);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+#new-grid-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.3);
+    background: linear-gradient(45deg, #ee5a24, #ff6b6b);
+}
+
+#new-grid-btn:active {
+    transform: translateY(0);
+}
+
+#container {
+    width: 960px;
+    height: 960px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    position: relative;
+}
+
+.grid-cell {
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    transition: background-color 0.1s ease;
+    cursor: crosshair;
+}
+
+.grid-cell:hover {
+    background-color: var(--next-shade) !important;
+}
+
+.grid-cell.shade-1 {
+    background-color: #FFF0F5;
+}
+
+.grid-cell.shade-2 {
+    background-color: #FFB6C1;
+}
+
+.grid-cell.shade-3 {
+    background-color: #FFC0CB;
+}
+
+.grid-cell.shade-4 {
+    background-color: #FF99AA;
+}
+
+.grid-cell.shade-5 {
+    background-color: #FF69B4;
+}
+
+.grid-cell.shade-6 {
+    background-color: #FF1493;
+}
+
+.grid-cell.shade-7 {
+    background-color: #FF007F;
+}
+
+.grid-cell.shade-8 {
+    background-color: #E0115F;
+}
+
+.grid-cell.shade-9 {
+    background-color: #C71585;
+}
+
+.grid-cell.shade-10 {
+    background-color: #8B008B;
+}
+
+.grid-info {
+    margin-top: 20px;
+    color: white;
+    text-align: center;
+    font-size: 1.1rem;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+/* Responsive adjustments */
+@media (max-width: 1000px) {
+    #container {
+        width: 90vw;
+        height: 90vw;
+        max-width: 600px;
+        max-height: 600px;
+    }
+}
